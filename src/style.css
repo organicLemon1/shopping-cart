@@ -1,0 +1,182 @@
+/* changing default styles of the browser */
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* navbar styles */
+
+.navbar {
+    background-color: #212121;
+    color: #fff;
+    padding: 25px 60px;
+    
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.cart {
+    position: relative;
+    background-color: #fff;
+    color: #212121;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -8px;
+    padding: 3px 4px;
+    border-radius:3px;
+    font-size: 16px;
+    background-color: #f06543;
+    color: #fff;
+}
+
+/* shop item styles */
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 30px;
+    justify-content: center;
+}
+
+
+@media (max-width: 950px) {
+    .shop {
+        grid-template-columns: repeat(3, 200px);
+    }
+}
+
+@media (max-width: 720px) {
+    .shop {
+        grid-template-columns: repeat(2, 200px);
+    }
+}
+
+@media (max-width: 490px) {
+    .shop {
+        grid-template-columns: repeat(1, 200px);
+    }
+}
+
+.item {
+    border: 1px solid #212121;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.item img {
+    /* width="200px" */
+    width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+}
+  
+
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    color: green;
+}
+
+.buttons img {
+    transition: transform 0.2s ease;
+}
+  
+.buttons img:active {
+    transform: scale(1.5); 
+}
+
+/* styles for label and some buttons */
+
+.label {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.HomeBtn, .checkout, .removeAll {
+    background-color: #52b81b;
+    color: #fff;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.removeAll {
+    background-color: red;
+}
+
+/* shopping cart styles */
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.cart-item {
+    background-color: #fff;
+    border: 1px solid #212121;
+    border-radius: 4px;
+    display: flex;
+}
+
+.title-price-x {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-price {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.cart-item-price {
+    background-color: #212121;
+    color: #fff;
+    border-radius: 4px;
+    padding: 3px 4px;
+}
